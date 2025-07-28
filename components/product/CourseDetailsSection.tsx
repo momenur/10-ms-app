@@ -13,7 +13,7 @@ export default function CourseDetailsSection({
 
   return (
     <>
-      <h3 className="text-lg md:text-xl font-semibold mb-2">{section.name}</h3>
+      <h3 className="mb-2 text-lg font-semibold md:text-xl">{section.name}</h3>
 
       <Card>
         <div className="space-y-4">
@@ -23,16 +23,16 @@ export default function CourseDetailsSection({
             return (
               <details
                 key={about.id || index}
-                className="group border-b border-gray-200 last:border-b-0"
+                className="border-b border-gray-200 group last:border-b-0"
               >
-                <summary className="flex items-center justify-between px-4 py-3 cursor-pointer hover:bg-gray-50   list-none">
+                <summary className="flex items-center justify-between px-4 py-3 list-none cursor-pointer ">
                   <div dangerouslySetInnerHTML={{ __html: about.title }} />
-                  <FaAngleDown className="w-5 h-5 text-gray-500 transition-transform duration-200 flex-shrink-0 ml-4 group-open:rotate-180" />
+                  <FaAngleDown className="flex-shrink-0 w-5 h-5 ml-4 text-gray-500 transition-transform duration-200 group-open:rotate-180" />
                 </summary>
 
                 <div className="px-6 pb-6 border-t border-gray-100">
                   <div
-                    className="text-gray-700 prose prose-sm max-w-none pt-4"
+                    className="pt-4 prose-sm prose text-gray-700 max-w-none"
                     dangerouslySetInnerHTML={{ __html: about.description }}
                   />
                 </div>
