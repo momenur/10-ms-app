@@ -135,7 +135,7 @@ export default async function ProductPage(props: ProductPageProps) {
             </div>
           </div>
 
-          <div className="hidden space-y-6 md:block md:col-span-4">
+          <div className="hidden md:block md:col-span-4">
             {product.media && <MediaSlider media={product.media} />}
             <div className="sticky space-y-4 top-23">
               <CTASection
